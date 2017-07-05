@@ -1,26 +1,458 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uec-la-MOT">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="KrR-0k-lsA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uec-la-MOT" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="caf-dF-y9m"/>
+                        <viewControllerLayoutGuide type="bottom" id="1cZ-nX-iEX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="HXb-nl-Gfj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yaQ-ZL-oKu">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Bat Cave" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv3-Z5-YTR">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.14822104150000001" green="0.20511111779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cave" translatesAutoresizingMaskIntoConstraints="NO" id="91F-fW-zuS">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="224.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Su-fP-uaM">
+                                        <rect key="frame" x="0.0" y="262.66666666666674" width="374" height="377.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="LaX-sD-6iZ"/>
+                                        </constraints>
+                                        <string key="text">You enter a dark humid cave. A faint echo of water droplets hitting the cold floor. You take one step and are suddenly encounter a swarm of dark screeching bats.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ0-Po-QIR">
+                                        <rect key="frame" x="0.0" y="640" width="374" height="30"/>
+                                        <state key="normal" title="Bring a flashlight with you to explore further"/>
+                                        <connections>
+                                            <segue destination="O42-Eb-D17" kind="show" id="mvW-XJ-3WN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1F-Mo-foc">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Bring a knife with you to explore further"/>
+                                        <connections>
+                                            <segue destination="zAf-xJ-Mlk" kind="show" id="G2R-Rg-hzo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0Su-fP-uaM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="91F-fW-zuS" secondAttribute="bottom" constant="100" id="oGC-c5-zj7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1cZ-nX-iEX" firstAttribute="top" secondItem="yaQ-ZL-oKu" secondAttribute="bottom" constant="8" symbolic="YES" id="2fe-mx-tfE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yaQ-ZL-oKu" secondAttribute="trailing" id="6SV-kY-Uz7"/>
+                            <constraint firstItem="yaQ-ZL-oKu" firstAttribute="leading" secondItem="HXb-nl-Gfj" secondAttribute="leadingMargin" id="AkA-4j-eot"/>
+                            <constraint firstItem="yaQ-ZL-oKu" firstAttribute="top" secondItem="caf-dF-y9m" secondAttribute="bottom" constant="8" symbolic="YES" id="k1k-Z4-LFx"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTq-Wn-Xji" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="70" y="184"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1uN-zw-XZ1">
+            <objects>
+                <viewController id="O42-Eb-D17" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aix-t1-Gaz"/>
+                        <viewControllerLayoutGuide type="bottom" id="tnt-Q1-p8x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uh9-KN-d47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-EW-K16">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Treasure Chest!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0P-JF-bY6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.82330796630000003" green="0.72317293670000005" blue="0.29927055860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chest" translatesAutoresizingMaskIntoConstraints="NO" id="4cy-bs-Fgu">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="224.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WaC-XI-gmD">
+                                        <rect key="frame" x="0.0" y="262.66666666666674" width="374" height="377.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="0VL-cQ-LGO"/>
+                                        </constraints>
+                                        <string key="text">You spot a shining gold-plated treasure chest at the end of the tunnel. One problem: it's locked. You need to find the key. Where do you want to look for the key?</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tz-pj-5NS">
+                                        <rect key="frame" x="0.0" y="640" width="374" height="30"/>
+                                        <state key="normal" title="Under every rock in the cave"/>
+                                        <connections>
+                                            <segue destination="dSY-6C-ZII" kind="show" id="l1V-Xx-XG7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-nF-W5p">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Feel the wall for hidden vaults"/>
+                                        <connections>
+                                            <segue destination="Phv-LF-Eny" kind="show" id="bF7-WZ-QsK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WaC-XI-gmD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4cy-bs-Fgu" secondAttribute="bottom" constant="100" id="e2e-fw-id3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tnt-Q1-p8x" firstAttribute="top" secondItem="dhE-EW-K16" secondAttribute="bottom" constant="8" symbolic="YES" id="QfL-Xw-3AS"/>
+                            <constraint firstItem="dhE-EW-K16" firstAttribute="top" secondItem="aix-t1-Gaz" secondAttribute="bottom" constant="8" symbolic="YES" id="YpF-Jp-b5C"/>
+                            <constraint firstItem="dhE-EW-K16" firstAttribute="leading" secondItem="Uh9-KN-d47" secondAttribute="leadingMargin" id="qgI-kP-Usr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dhE-EW-K16" secondAttribute="trailing" id="wSC-Su-KvG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0e-ft-yK4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="-87"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oXU-tx-As0">
+            <objects>
+                <viewController id="zAf-xJ-Mlk" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fk0-pX-blE"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ak-9L-NAM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wJR-Vk-sR8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ApB-Ib-Bln">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Rabid Bat!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgT-in-gxd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.79966806989999994" green="0.12116236230000001" blue="0.080994340430000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bat" translatesAutoresizingMaskIntoConstraints="NO" id="NOX-oY-81C">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="224.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cQ-Db-0h2">
+                                        <rect key="frame" x="0.0" y="262.66666666666674" width="374" height="377.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="fyw-Jf-QeT"/>
+                                        </constraints>
+                                        <string key="text">There's a huge rabid bat looking for some tasty human blood. All you have in defense is your knife. How are you going to use it?</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLk-ig-pAb">
+                                        <rect key="frame" x="0.0" y="640" width="374" height="30"/>
+                                        <state key="normal" title="Use big swings and hope to hit the bat"/>
+                                        <connections>
+                                            <segue destination="4UT-GK-iZS" kind="show" id="jRN-vB-63R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-ND-B4S">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Make a bunch of calculated stabs to kill the bat"/>
+                                        <connections>
+                                            <segue destination="Ppq-o5-hqq" kind="show" id="Gf8-HI-UwP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5cQ-Db-0h2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NOX-oY-81C" secondAttribute="bottom" constant="100" id="Wra-gC-cAt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ak-9L-NAM" firstAttribute="top" secondItem="ApB-Ib-Bln" secondAttribute="bottom" constant="8" symbolic="YES" id="B0Z-aZ-kCV"/>
+                            <constraint firstItem="ApB-Ib-Bln" firstAttribute="leading" secondItem="wJR-Vk-sR8" secondAttribute="leadingMargin" id="EqB-Sc-lhJ"/>
+                            <constraint firstItem="ApB-Ib-Bln" firstAttribute="top" secondItem="fk0-pX-blE" secondAttribute="bottom" constant="8" symbolic="YES" id="Iwx-Eu-ELJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ApB-Ib-Bln" secondAttribute="trailing" id="nvF-NK-JgF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1PC-S0-JC6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="705"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TlY-em-bvE">
+            <objects>
+                <viewController id="4UT-GK-iZS" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cuf-Pd-4aU"/>
+                        <viewControllerLayoutGuide type="bottom" id="v0k-b4-ZGV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0OF-DG-tXC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hhH-z3-kKH">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="You're Dead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q7-yl-YDi">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.14822104150000001" green="0.20511111779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skeleton" translatesAutoresizingMaskIntoConstraints="NO" id="5HL-LX-dLr">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="254.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="126-pI-5wC">
+                                        <rect key="frame" x="0.0" y="292.66666666666674" width="374" height="377.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="q9T-UX-5Wa"/>
+                                        </constraints>
+                                        <string key="text">One of your hopeful swipws hit the bat and killed it. Unfortunately, you die of starvation because you can't find the way out of the cave.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c5-ET-ioF">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Go back to the start"/>
+                                        <connections>
+                                            <segue destination="uec-la-MOT" kind="show" id="0qT-Mh-tGD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="126-pI-5wC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5HL-LX-dLr" secondAttribute="bottom" constant="100" id="Rgo-9B-A7a"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v0k-b4-ZGV" firstAttribute="top" secondItem="hhH-z3-kKH" secondAttribute="bottom" constant="8" symbolic="YES" id="J6C-O2-zjI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hhH-z3-kKH" secondAttribute="trailing" id="REt-m4-9z6"/>
+                            <constraint firstItem="hhH-z3-kKH" firstAttribute="leading" secondItem="0OF-DG-tXC" secondAttribute="leadingMargin" id="Voq-ar-2x3"/>
+                            <constraint firstItem="hhH-z3-kKH" firstAttribute="top" secondItem="Cuf-Pd-4aU" secondAttribute="bottom" constant="8" symbolic="YES" id="q7k-sc-bOn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFb-cj-x1u" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3125" y="1151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iz1-xG-j1k">
+            <objects>
+                <viewController id="Ppq-o5-hqq" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qMy-TU-i3f"/>
+                        <viewControllerLayoutGuide type="bottom" id="FbP-KA-gMa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pdM-hd-2sX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-LK-a5N">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="You're Dead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMe-1Z-Paf">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.14822104150000001" green="0.20511111779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skeleton" translatesAutoresizingMaskIntoConstraints="NO" id="tD4-EP-2fb">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="254.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" text="Your calculated stabs are not fast enough to hit the bat before it bites you. The rabies leads you to a painful death." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-c1-E76">
+                                        <rect key="frame" x="0.0" y="292.66666666666674" width="374" height="377.33333333333326"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="mTt-nh-t6n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds5-Dq-dHz">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Go back to the start"/>
+                                        <connections>
+                                            <segue destination="uec-la-MOT" kind="show" id="4be-9g-4R9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YvR-c1-E76" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tD4-EP-2fb" secondAttribute="bottom" constant="100" id="FuZ-RG-DBG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FbP-KA-gMa" firstAttribute="top" secondItem="hJ8-LK-a5N" secondAttribute="bottom" constant="8" symbolic="YES" id="0NG-vC-kwj"/>
+                            <constraint firstItem="hJ8-LK-a5N" firstAttribute="leading" secondItem="pdM-hd-2sX" secondAttribute="leadingMargin" id="2vF-UR-axz"/>
+                            <constraint firstItem="hJ8-LK-a5N" firstAttribute="top" secondItem="qMy-TU-i3f" secondAttribute="bottom" constant="8" symbolic="YES" id="HUZ-lh-RoF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hJ8-LK-a5N" secondAttribute="trailing" id="wzI-cV-ZNW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQa-Gt-8ps" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="1178"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="duC-hu-iKx">
+            <objects>
+                <viewController id="Phv-LF-Eny" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q1M-fU-SRp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ivi-bM-OU8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sp9-PQ-Mou">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3ed-bP-XTS">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="You're Dead" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssq-Mw-Scp">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.14822104150000001" green="0.20511111779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skeleton" translatesAutoresizingMaskIntoConstraints="NO" id="C7I-gH-43W">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="254.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S4R-bL-nHQ">
+                                        <rect key="frame" x="0.0" y="292.66666666666674" width="374" height="377.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="U10-0X-eaU"/>
+                                        </constraints>
+                                        <string key="text">As your tracing your hand along the cave wall, suddenly an icicle falls on your head. It pierces your skull and before you know it, you're dead.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-bk-bhd">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Go back to the start"/>
+                                        <connections>
+                                            <segue destination="uec-la-MOT" kind="show" id="KOo-47-Erb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="S4R-bL-nHQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="C7I-gH-43W" secondAttribute="bottom" constant="100" id="owI-v2-ggE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3ed-bP-XTS" firstAttribute="leading" secondItem="Sp9-PQ-Mou" secondAttribute="leadingMargin" id="CFq-6X-uzg"/>
+                            <constraint firstItem="Ivi-bM-OU8" firstAttribute="top" secondItem="3ed-bP-XTS" secondAttribute="bottom" constant="8" symbolic="YES" id="PMt-8Y-4dU"/>
+                            <constraint firstItem="3ed-bP-XTS" firstAttribute="top" secondItem="Q1M-fU-SRp" secondAttribute="bottom" constant="8" symbolic="YES" id="QKM-IT-Qty"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ed-bP-XTS" secondAttribute="trailing" id="UlO-ms-dqd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXY-Nw-r7D" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397" y="184"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Pm-si-hpn">
+            <objects>
+                <viewController id="dSY-6C-ZII" customClass="ViewController" customModule="Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mnr-mn-faz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tdb-xm-TYk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jXi-R6-MiE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KE1-iO-tcC">
+                                <rect key="frame" x="20" y="28" width="374" height="700"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="You Win!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtI-c0-l5Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                        <color key="textColor" red="0.02823864937" green="0.73376781089999998" blue="0.23178465109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="1Dy-EO-Jym">
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="374" height="254.33333333333337"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="32W-2x-Ci7">
+                                        <rect key="frame" x="0.0" y="292.66666666666674" width="374" height="377.33333333333326"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="377.67000000000002" id="jzn-cN-x59"/>
+                                        </constraints>
+                                        <string key="text">You found the key to the chest and you find a batman costume inside! You put it on and you are protected from bats and falling iciclcles so you are able to navigate your way outisdde of the cave. </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K86-um-kCM">
+                                        <rect key="frame" x="0.0" y="670" width="374" height="30"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <segue destination="uec-la-MOT" kind="show" id="lGf-Fm-Je1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="32W-2x-Ci7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1Dy-EO-Jym" secondAttribute="bottom" constant="100" id="MzH-9u-HZz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KE1-iO-tcC" secondAttribute="trailing" id="NLt-26-583"/>
+                            <constraint firstItem="KE1-iO-tcC" firstAttribute="top" secondItem="Mnr-mn-faz" secondAttribute="bottom" constant="8" symbolic="YES" id="VaP-nH-LV2"/>
+                            <constraint firstItem="Tdb-xm-TYk" firstAttribute="top" secondItem="KE1-iO-tcC" secondAttribute="bottom" constant="8" symbolic="YES" id="nKc-WC-7lM"/>
+                            <constraint firstItem="KE1-iO-tcC" firstAttribute="leading" secondItem="jXi-R6-MiE" secondAttribute="leadingMargin" id="zSk-SJ-EL8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOA-hn-EBk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397" y="-495"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bat" width="2048" height="1536"/>
+        <image name="batman" width="634" height="971"/>
+        <image name="cave" width="550" height="284"/>
+        <image name="chest" width="1200" height="900"/>
+        <image name="skeleton" width="625" height="350"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0qT-Mh-tGD"/>
+    </inferredMetricsTieBreakers>
 </document>
